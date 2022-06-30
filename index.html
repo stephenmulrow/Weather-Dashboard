@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link href="./style.css" rel ="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Weather Dashboard</title>
+</head>
+<body>
+<div class="card">
+ <h1 class="header">Weather Dashboard</h1>
+ <h2>Search for a city</h2> 
+ <form class="search">
+<input name="newCity" id="newCity" type="text" class="form-input" placeholder="Phoenix"/>
+ </form>
+<button type="submit" class="btn" id="searchBtn">Search</button>
+<div class="line"></div>
+</div>
+<div>
+  <ul class="first">
+    <li class="cityList"></li>
+    <li class="cityList"></li>
+    <li class="cityList"></li>
+    <li class="cityList"></li>
+    <li class="cityList"></li>
+    <li class="cityList"></li>
+    <li class="cityList"></li>
+  </ul>
+</div>
+<div class="second" id="weather-container">
+  <h2 class="cityWeather"></h2>
+  <ul class="temp">
+    <li class="tempLi"></li>
+    <li class="tempLi2"></li>
+    <li class="tempLi3"></li>
+    <li class="tempLi4"></li>
+  </ul>
+</div>
+<div>
+  <h3 class="forecast">5-Day Forecast</h3>
+  <ul class="five-day"></ul>
+  <li class="dayOne"></li>
+  <li class="dayTwo"></li>
+  <li class="dayThree"></li>
+  <li class="dayFour"></li>
+  <li class="dayFive"></li>
+</div>
+<script src="./script.js"></script>  
+</body>
+</html>
