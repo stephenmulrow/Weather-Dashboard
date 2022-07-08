@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     
     <title>Weather Dashboard</title>
 </head>
@@ -13,14 +14,17 @@
  <h1 class="header">Weather Dashboard</h1>
  <h2>Search for a city</h2> 
  <form class="search">
-<input name="newCity" id="newCity" type="text" class="form-input" placeholder="Phoenix"/>
+<input name="newCity" id="newCity" type="text" class="form-input" list ="searchdata" placeholder="Phoenix"/>
  </form>
-<button type="submit" class="btn" id="searchBtn">Search</button>
+ <br>
+
+<button type="button" class="btn btn-info" id="searchBtn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Get Weather</button>
+<datalist id="searchdata"></datalist>
 <div class="line"></div>
 </div>
 <div>
   <ul class="first">
-    <li class="cityList"></li>
+    <li class="cityList" id="cityList"></li>
     <li class="cityList"></li>
     <li class="cityList"></li>
     <li class="cityList"></li>
@@ -29,24 +33,86 @@
     <li class="cityList"></li>
   </ul>
 </div>
-<div class="second" id="weather-container">
+<div class="container">
+  <div class="card text-bg-primary mb-3" style="width: 38rem;">
   <h2 class="cityWeather"></h2>
+  <br>
   <ul class="temp">
+    <div id="icon">
+      <img id="ticon" src="" alt="weather icon">
+      </div>
     <li class="tempLi"></li>
     <li class="tempLi2"></li>
     <li class="tempLi3"></li>
     <li class="tempLi4"></li>
   </ul>
 </div>
-<div>
+</div>
+<div class="container">
   <h3 class="forecast">5-Day Forecast</h3>
   <ul class="five-day"></ul>
-  <li class="dayOne"></li>
-  <li class="dayTwo"></li>
-  <li class="dayThree"></li>
-  <li class="dayFour"></li>
-  <li class="dayFive"></li>
+  <div class="col-sm-3">
+  <div class="card" style="width: 18rem;">
+    <div id="icon">
+      <img id="wicon" src="" alt="weather icon">
+    </div>
+    <h4 class="dayOne"></h4>
+    <ul>
+    <li class="forecast1"></li>
+    <li class="forecast2"></li>
+    <li class="forecast3"></li>
+  </ul>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div id="icon2">
+    <img id="wicon2" src="" alt="weather icon">
+    </div>
+    <h4 class="dayTwo"></h4>
+    <ul>
+    <li class="forecast4"></li>
+    <li class="forecast5"></li>
+    <li class="forecast6"></li>
+  </ul>
+  </div>
+  <div class="card" style="width: 18rem;">
+  <div id="icon3">
+    <img id="wicon3" src="" alt="weather icon">
+    </div>
+    <h4 class="dayThree"></h4>
+    <ul>
+    <li class="forecast7"></li>
+    <li class="forecast8"></li>
+    <li class="forecast9"></li>
+  </ul>
+  </div>
+  <div class="card" style="width: 18rem;">
+  
+  <div id="icon4">
+    <img id="wicon4" src="" alt="weather icon">
+    </div>
+    <h4 class="dayFour"></h4>
+    <ul>
+    <li class="forecast10"></li>
+    <li class="forecast11"></li>
+    <li class="forecast12"></li>
+  </ul>
+  </div>
+  <div class="card" style="width: 18rem;">
+  <div id="icon5">
+    <img id="wicon5" src="" alt="weather icon">
+    </div>
+    <h4 class="dayFive"></h4>
+    <ul>
+    <li class="forecast13"></li>
+    <li class="forecast14"></li>
+    <li class="forecast15"></li>
+  </ul>
 </div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./script.js"></script>  
 </body>
 </html>
